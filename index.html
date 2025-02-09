@@ -124,7 +124,7 @@
     
 
     <!-------------------- Qualification Area (Start) -------------------->
-    <section class="qualification">
+    <section class="qualification" id="qualification">
 
         <div class="heading">
             <h2>my <span>qualification</span></h2>
@@ -257,27 +257,6 @@
             strings: ['Student'],
             typeSpeed: 120,
             loop: true
-        });
-    </script>
-
-    <!-- Contact-Form Script -->
-    <script>
-        jQuery('#contactUs-Form').on('submit',function(e){
-          jQuery('#msg').html('');
-          jQuery('#submit').html('Please wait');
-          jQuery('#submit').attr('disabled',true);
-          jQuery.ajax({
-              url:'assets/php/submit.php',
-              type:'post',
-              data:jQuery('#contactUs-Form').serialize(),
-              success:function(result){
-                  jQuery('#msg').html(result);
-                  jQuery('#submit').html('Submit');
-                  jQuery('#submit').attr('disabled',false);
-                  jQuery('#contactUs-Form')[0].reset();
-              }
-          });
-          e.preventDefault();
         });
     </script>
 
